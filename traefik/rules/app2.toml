@@ -1,0 +1,16 @@
+[http.routers]
+  [http.routers.app2-rtr]
+      entryPoints = ["https"]
+      rule = "Host(`app2.my-domain.no`)"
+      service = "app2-svc"
+      middlewares = ["chain-no-auth"]
+      [http.routers.app2-rtr.tls]
+
+
+
+[http.services]
+  [http.services.app2-svc]
+    [http.services.app2-svc.loadBalancer]
+      passHostHeader = true
+      [[http.services.app2-svc.loadBalancer.servers]]
+        url = "http://192.168.1.20" # or whatever your external host's IP:port is
