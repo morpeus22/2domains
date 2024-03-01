@@ -1,7 +1,7 @@
 [http.routers]
   [http.routers.app3-rtr]
       entryPoints = ["https"]
-      rule = "Host(`app3.my-domain-1.no`)"
+      rule = "Host(`app3.my-domain-2.no`)"
       service = "app3-svc"
       middlewares = ["chain-no-auth"]
       [http.routers.app3-rtr.tls]
