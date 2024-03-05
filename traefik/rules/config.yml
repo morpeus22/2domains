@@ -1,4 +1,4 @@
 tls:
   certificates:
-    - certfile: /cert/my-domain.crt
-      keyfile: /cert/my-domain.key
+    - certfile: /cert/cert1.crt
+      keyfile: /cert/cert1.key
